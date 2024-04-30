@@ -5,12 +5,14 @@ interface Props {
   page: string;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  setIsMenuToggled: (value: boolean) => void;
 }
 
 const Link = ({
   page,
   selectedPage,
   setSelectedPage,
+  setIsMenuToggled
 }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage
 
@@ -20,7 +22,10 @@ const Link = ({
       className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""} 
       transition duration-500 hover:text-primary-300
       `}
-      onClick={() => setSelectedPage(lowerCasePage)}
+      onClick={() => {
+        setSelectedPage(lowerCasePage);
+        setIsMenuToggled(false)
+      }}
     >
       {page}
     </AnchorLink>
