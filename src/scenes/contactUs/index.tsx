@@ -1,5 +1,5 @@
 import { SelectedPage } from "@/shared/types";
-import { useForm } from "react-hook-form";;
+import { useForm } from "react-hook-form";
 import { motion } from 'framer-motion';
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png" 
 import HText from "@/shared/HText";
@@ -21,7 +21,7 @@ const ContactUs = ({
     formState: { errors },
   } = useForm()
 
-  const onSubmit = async (e: any) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
