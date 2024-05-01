@@ -12,6 +12,36 @@ import image5 from "@/assets/image5.png"
 import image6 from "@/assets/image6.png"
 
 
+const classes: IClass[] = [
+  {
+    name: "Weight Training Classes",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex inventore quis, consequatur Inventore, dolorem impedit.",
+    image: image1,
+  },
+  {
+    name: "Yoga Training Classes",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex inventore quis, consequatur Inventore, dolorem impedit.",
+    image: image2,
+  },
+  {
+    name: "Ab Core Classes",
+    image: image3,
+  },
+  {
+    name: "Adventure Training Classes",
+    image: image4,
+  },
+  {
+    name: "Fitness Training Classes",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex inventore quis, consequatur Inventore, dolorem impedit.",
+    image: image5,
+  },
+  {
+    name: "Training Classes",
+    image: image6,
+  },
+]
+
 
 interface OurClassesProps {
   setSelectedPage: (value: SelectedPage) => void;
