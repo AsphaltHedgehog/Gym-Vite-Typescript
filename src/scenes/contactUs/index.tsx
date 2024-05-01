@@ -66,8 +66,8 @@ const ContactUs = ({
             <form
               target="_blank"
               onSubmit={onSubmit}
+              action="https://formsubmit.co/2e8e97bd2a26684da6e91c958112725b"
               method="POST"
-              action="https://formsubmit.co/el/gepuwo"
             >
               <input
                 className={inputStyles}
@@ -94,7 +94,7 @@ const ContactUs = ({
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 })}
               />
-              {errors.name && (
+              {errors.email && (
                 <p className="mt-1 text-primary-500">
                   {errors.email.type === "required" && "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
@@ -111,7 +111,7 @@ const ContactUs = ({
                   maxLength: 2000,
                 })}
               />
-              {errors.name && (
+              {errors.message && (
                 <p className="mt-1 text-primary-500">
                   {errors.message.type === "required" && "This field is required."}
                   {errors.message.type === "maxLength" && "Max length is 2000 char."}
